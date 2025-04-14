@@ -65,6 +65,7 @@ const navListStyle = {
   listStyle: "none",
   margin: 0,
   padding: 0,
+  flexWrap: "wrap",
 };
 
 const navItemStyle = {
@@ -97,3 +98,23 @@ const socialLinksStyle = {
   display: "flex",
   gap: "15px",
 };
+
+// Media queryt responsiivisuutta varten
+const mediaQueries = `
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav li {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+`;
