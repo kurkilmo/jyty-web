@@ -15,6 +15,9 @@ export default function Navbar() {
         <nav style={navStyle}>
           <ul style={navListStyle}>
             <li style={navItemStyle}>
+              <Link href="/stream">Vappustriimi</Link>
+            </li>
+            <li style={navItemStyle}>
               <Link href="/vappulehti">Vappulehti</Link>
             </li>
             <li style={navItemStyle}>

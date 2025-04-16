@@ -16,6 +16,7 @@ const layoutStyle = {
   display: "flex",
   flexDirection: "column",
   minHeight: "100vh",
+  height: "100%"
 };
 
 const mainStyle = {
@@ -24,4 +25,5 @@ const mainStyle = {
   alignItems: "center",
   flex: 1,
   padding: "20px",
+  height: "100%"
 };
