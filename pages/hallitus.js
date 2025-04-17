@@ -57,27 +57,27 @@ export default function Hallitus() {
   return (
     <Layout>
       <div>
-        <h1>Hallitus</h1>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+        <h1 style={{ fontSize: "5em", textAlign: "center" }}>Hallitus</h1>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "30px" }}>
           {members.map((member) => (
             <div
               key={member.id}
               style={{
                 border: "1px solid #ccc",
-                borderRadius: "8px",
-                padding: "10px",
+                borderRadius: "12px",
+                padding: "20px",
                 textAlign: "center",
-                width: "200px",
+                width: "250px",
                 backgroundColor: "rgb(230,65,157)"
               }}
             >
               <img
                 src={member.image}
                 alt={member.name}
-                style={{ borderRadius: "50%", width: "100px", height: "100px" }}
+                style={{ borderRadius: "50%", width: "120px", height: "120px" }}
               />
-              <h2 style={{ fontSize: "1.2em" }}>{member.name}</h2>
-              <p style={{ fontStyle: "italic" }}>{member.title}</p>
+              <h2 style={{ fontSize: "1.5em" }}>{member.name}</h2>
+              <p style={{ fontStyle: "italic", fontSize: "1.2em" }}>{member.title}</p>
             </div>
           ))}
         </div>
