@@ -68,6 +68,7 @@ export default function Hallitus() {
                 padding: "10px",
                 textAlign: "center",
                 width: "200px",
+                backgroundColor: "rgb(230,65,157)"
               }}
             >
               <img

@@ -7,6 +7,5 @@ export default function Home() {
           <h1>Jyväskylän teekkariyhdistys</h1>
         </div>
       </Layout>
-
     );
   }

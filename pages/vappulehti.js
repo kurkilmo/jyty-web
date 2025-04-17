@@ -25,7 +25,7 @@ export default function Vappu() {
   return (
     <Layout>
       <div>
-        <h1>Artikkelit</h1>
+        <h1>Jyty Vapu_leho</h1>
         <div>
           {articles.map((article) => (
             <div key={article.id} style={{ marginBottom: "20px" }}>
