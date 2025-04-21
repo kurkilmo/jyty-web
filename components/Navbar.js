@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="logo-container">
         <div className="logo">
           <Link href="/">
-            <img src="logo.svg" alt="Jyty Logo" />
+            <img src="logo.png" alt="Jyty Logo" />
           </Link>
         </div>
         <Link href="/" className="logo-text desktop-only">
