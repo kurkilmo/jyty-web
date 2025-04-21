@@ -1,5 +1,3 @@
-import Layout from "../components/Layout";
-
 const members = [
   {
     name: "Juho Järvi",
@@ -50,19 +48,23 @@ const members = [
 
 export default function Hallitus() {
   return (
-    <Layout>
-      <div>
-        <h1 className="hallitus-title">Hallitus</h1>
-        <div className="hallitus-container">
-          {members.map((member) => (
-            <div key={member.name} className="hallitus-card">
-              <img src={member.image} alt={member.name} />
-              <h2>{member.name}</h2>
-              <p>{member.title}</p>
-            </div>
-          ))}
-        </div>
+    <div>
+      <h1 className="hallitus-title">Hallitus</h1>
+      <div className="hallitus-container">
+        {members.map((member) => (
+          <div key={member.name} className="hallitus-card">
+            <img src={member.image} alt={member.name} />
+            <h2>{member.name}</h2>
+            <p>{member.title}</p>
+          </div>
+        ))}
       </div>
-    </Layout>
+    </div>
   );
+}
+
+export async function generateMetadata() {
+  return {
+      title: "Hallitus"
+  }
 }

@@ -1,5 +1,3 @@
-import Layout from "../components/Layout";
-
 const articles = [
   {
     id: 1,
@@ -68,33 +66,37 @@ const articles = [
 
 export default function Vappu() {
   return (
-    <Layout>
-      <div className="container">
-        <h1 className="vappu-title">Jyty Vapu_leho</h1>
-        <div>
-          {articles.map((item) =>
-            item.type === "article" ? (
-              <div key={item.id} className="article-container">
-                <h2 className="article-title">{item.title}</h2>
-                <figure className="article-figure">
-                  <img src={item.image} alt={item.title} className="article-image" />
-                  <figcaption className="article-caption">{`Kuva: ${item.title}`}</figcaption>
-                </figure>
-                <div
-                  className="article-content"
-                  dangerouslySetInnerHTML={{ __html: item.content }}
-                ></div>
-                <p className="article-author">{`Kirjoittanut: ${item.author}`}</p>
-              </div>
-            ) : (
-              <blockquote key={item.id} className="quote-container">
-                <p className="quote-content">{item.content}</p>
-                <footer className="quote-author">{`- ${item.author}`}</footer>
-              </blockquote>
-            )
-          )}
-        </div>
+    <div className="container">
+      <h1 className="vappu-title">Jyty Vapu_leho</h1>
+      <div>
+        {articles.map((item) =>
+          item.type === "article" ? (
+            <div key={item.id} className="article-container">
+              <h2 className="article-title">{item.title}</h2>
+              <figure className="article-figure">
+                <img src={item.image} alt={item.title} className="article-image" />
+                <figcaption className="article-caption">{`Kuva: ${item.title}`}</figcaption>
+              </figure>
+              <div
+                className="article-content"
+                dangerouslySetInnerHTML={{ __html: item.content }}
+              ></div>
+              <p className="article-author">{`Kirjoittanut: ${item.author}`}</p>
+            </div>
+          ) : (
+            <blockquote key={item.id} className="quote-container">
+              <p className="quote-content">{item.content}</p>
+              <footer className="quote-author">{`- ${item.author}`}</footer>
+            </blockquote>
+          )
+        )}
       </div>
-    </Layout>
+    </div>
   );
+}
+
+export async function generateMetadata() {
+  return {
+      title: "Vappulehti"
+  }
 }
