@@ -26,12 +26,13 @@ const articles = [
     type: "article",
     title: "Perustamiskokous",
     content: `
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat consectetur mi non pulvinar. Cras elementum arcu a erat dictum elementum at sit amet dui. Nam quis molestie elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam nec justo id mi tristique euismod. Donec ac viverra lectus, eget faucibus lorem. Donec gravida ornare ligula, a eleifend purus. Aliquam sed cursus tortor, sed facilisis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-      <p>Proin auctor elementum bibendum. Mauris dapibus neque at nibh lacinia finibus nec sit amet felis. Proin quis turpis purus. Proin aliquet libero mi, a scelerisque ipsum hendrerit eget. Vestibulum vel scelerisque tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam aliquam viverra viverra. Donec luctus maximus ipsum, at maximus enim interdum et. Fusce et nulla tincidunt, scelerisque odio vitae, varius arcu. Praesent porta semper ipsum vitae eleifend. Donec sit amet gravida dui. Sed non mauris blandit, laoreet massa vel, feugiat velit. Phasellus lacus massa, blandit quis augue in, luctus molestie neque. Maecenas quis viverra libero, condimentum volutpat magna.</p>
-      <p>Phasellus ante metus, commodo at neque vel, elementum rutrum lectus. Duis venenatis tellus tortor. Curabitur scelerisque ultricies lacus sit amet venenatis. Sed odio eros, vulputate eget ante ac, malesuada venenatis arcu. In eleifend sagittis nisi, vel ornare est dignissim nec. Nunc non dui sed odio ultrices dignissim ut quis sapien. Fusce tincidunt porttitor ipsum a luctus. Suspendisse eget arcu vitae ex venenatis feugiat. Vivamus sagittis, mauris in auctor vulputate, tortor augue facilisis ipsum, rutrum vulputate augue neque ac justo. Nulla est nunc, imperdiet et mauris at, facilisis ultricies velit. Morbi turpis mauris, efficitur sed tincidunt sed, faucibus laoreet tortor. Vivamus egestas lectus libero, viverra ultrices purus accumsan sed. Nullam justo velit, congue in libero in, pellentesque accumsan felis.</p>
+      <p>Siitä illasta Opinkivensaunassa tuli yhtä lailla legendaarinen kuin Kuokkalankin hämärä boolisessio. Ennen Nuutti Rantasen valmistujaisjuhlia pakkasimme mukaamme intoa ja uteliaisuutta, ja suuntasimme Jyväskylän kuuluisimpaan saunaan.</p>
+      <p>Opinkiven pöydän ääreen oli kutsuttu kaikki aiheen äärelle eksyneet, eikä porukka pettänyt. Säännöt, jotka oli hiottu workshopien pöhinässä puhtaaksi kuin uunituore diplomi-insinöörityö, hyväksyttiin viimeisellä silauksella.</p>
+      <p>Seuraavaksi valokuvattiin porukka, joka kantaisi vastuun JYTYN tulevaisuudesta: puheenjohtaja Juho Järvi, varapuheenjohtaja Eemil Hukkanen, sihteeri Ilmo Kurki ja rahastonhoitaja, itse juhlien kunniavieras, Nuutti Rantanen. Hallituksen jäseniksi setämies kerhoon valittiin Lassi Laitinen, Kasper Pelkonen, Theodore Veistos, Atte Heikkinen ja Juho Kallijärvi.</p>
+      <p>Kun yhdistys oli virallisesti perustettu ja maljat kohotettu kuohuviinille, siirryimme höyryävään saunaan. Kiuaskivien loimutessa kerroimme tarinoita Kuokkalasta, booli-illasta ja siitä, miten pienestä hikisestä yksiöstä lähti liikkeelle idea, joka nyt sai muotonsa Opinkivensaunan lauteilla. Ja niin, kun lasit vinkuen kilisivät, tiedettiin. Tässä porukassa on ainesta vielä moneksi legendaksi. JYTY oli syntynyt.</p>
     `,
     image: "perustamis.jpg",
-    author: "En muista joku",
+    author: "Juho Järvi",
   },
   {
     id: 4,
@@ -42,14 +43,19 @@ const articles = [
   {
     id: 5,
     type: "article",
-    title: "joo joku artikkeli",
+    title: "Kansainvälisen Teekkarin Sanat",
     content: `
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat consectetur mi non pulvinar. Cras elementum arcu a erat dictum elementum at sit amet dui. Nam quis molestie elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam nec justo id mi tristique euismod. Donec ac viverra lectus, eget faucibus lorem. Donec gravida ornare ligula, a eleifend purus. Aliquam sed cursus tortor, sed facilisis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-      <p>Proin auctor elementum bibendum. Mauris dapibus neque at nibh lacinia finibus nec sit amet felis. Proin quis turpis purus. Proin aliquet libero mi, a scelerisque ipsum hendrerit eget. Vestibulum vel scelerisque tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam aliquam viverra viverra. Donec luctus maximus ipsum, at maximus enim interdum et. Fusce et nulla tincidunt, scelerisque odio vitae, varius arcu. Praesent porta semper ipsum vitae eleifend. Donec sit amet gravida dui. Sed non mauris blandit, laoreet massa vel, feugiat velit. Phasellus lacus massa, blandit quis augue in, luctus molestie neque. Maecenas quis viverra libero, condimentum volutpat magna.</p>
-      <p>Phasellus ante metus, commodo at neque vel, elementum rutrum lectus. Duis venenatis tellus tortor. Curabitur scelerisque ultricies lacus sit amet venenatis. Sed odio eros, vulputate eget ante ac, malesuada venenatis arcu. In eleifend sagittis nisi, vel ornare est dignissim nec. Nunc non dui sed odio ultrices dignissim ut quis sapien. Fusce tincidunt porttitor ipsum a luctus. Suspendisse eget arcu vitae ex venenatis feugiat. Vivamus sagittis, mauris in auctor vulputate, tortor augue facilisis ipsum, rutrum vulputate augue neque ac justo. Nulla est nunc, imperdiet et mauris at, facilisis ultricies velit. Morbi turpis mauris, efficitur sed tincidunt sed, faucibus laoreet tortor. Vivamus egestas lectus libero, viverra ultrices purus accumsan sed. Nullam justo velit, congue in libero in, pellentesque accumsan felis.</p>
+      <p>Opiskelijavaihto on todella kannattavaa sekä antoisaa teekkarille. Pääset oppimaan vaihtomaasi kieltä sekä kehittämään omia vuorovaikutustaitojasi monikulttuurisessa ympäristössä. Mainittakoot vielä, että kun kerran pääsee irti arjen rutiineista ja suomalaisten harmaista kampuskäytävistä, alkaa elämä maistua aivan uudelta… usein myös hieman oluelta.</p>
+      <p>Vaihdossa pääset oppimaan, miten käydään kaupassa ilman että ymmärrät sanaakaan pakkausselosteista. Kielitaidon kehittymistä voikin mitata sillä, että osaa tilata paikallisessa baarissa juuri sen oluen, jossa oli se hieno etiketti, eikä se vahingossa 12- prosenttinen “pikkupullo”. Jokainen moka, eksyminen ja sattumus kääntyy lopulta tarinaksi, jota kerrotaan vielä vuosien päästä sitsipöydässä.</p>
+      <p>Vaihdosta sinulle jää käteen enemmän kuin kasa jääkaappimagneetteja ja epämääräinen kansainvälinen ruokakokoelma. Se antaa itseluottamusta, avartaa maailmankuvaa ja muistuttaa siitä, että tuntematonkin voi olla ihan hemmetin siistiä. Suosittelen – ja niin suosittelee myös se minä, joka ei enää pelkää puhua englantia edes silloin, kun on krapulassa. Lopuksi haluan vielä jakaa hiukan maisemakuvia, toivottavasti ne saavat sinunkin sisäisen vaihtaripersoonasi heräämään.</p>
+      <p>Cheers, prost,– tai kuten täälläpäin sanotaan: more beer, less fear and in the end game is game.</p>
+      <p>Haluan toivottaa oikein hyvää ja viihtyisää vappua juursi sinulle.</p>
+      <p>- Terveisin: Moguli <br>
+         - Innsbruckissa <br>
+         - joku huhtikuinen ilta paikallisessa</p>
     `,
     image: "https://placehold.co/600x400",
-    author: "Kissa",
+    author: "Moguli",
   },
 ];
 
