@@ -1,0 +1,310 @@
+/* ==========================
+   Yleiset tyylit
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(230, 65, 157);
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+/* ==========================
+   Hallitus-sivun tyylit
+========================== */
+.hallitus-title {
+  font-size: 5em;
+  text-align: center;
+}
+
+.hallitus-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.hallitus-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  background-color: rgb(230, 65, 157);
+  box-sizing: border-box;
+}
+
+.hallitus-card img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.hallitus-card h2 {
+  font-size: 1.5em;
+}
+
+.hallitus-card p {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/* ==========================
+   Vappulehti-sivun tyylit
+========================== */
+.vappu-title {
+  text-align: center;
+  font-size: 5em;
+}
+
+.article-container {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.article-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.article-figure {
+  margin: 0 auto;
+}
+
+.article-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #00ff00;
+  border-radius: 10px;
+}
+
+.article-caption {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 8px;
+}
+
+.article-content {
+  text-align: justify;
+  font-size: 1.5em;
+  line-height: 1.8;
+  margin-top: 20px;
+  padding: 0 120px;
+}
+
+.article-author {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-top: 20px;
+  color: #555;
+}
+
+/* ==========================
+   Etusivun tyylit
+========================== */
+.home-container {
+  max-width: 600px;
+  margin: 0 auto 0 50px;
+  padding: 20px;
+}
+
+.home-title {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.home-highlight {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.home-paragraph {
+  font-size: 1.5em;
+  line-height: 1.8;
+}
+
+.home-subtitle {
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.home-list {
+  font-size: 1.5em;
+  line-height: 1.8;
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+/* ==========================
+   Footer-tyylit
+========================== */
+footer {
+  padding: 20px;
+  text-align: center;
+  height: 60px;
+  flex-shrink: 0;
+  background-color: rgb(230, 65, 157);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* ==========================
+   Layout-tyylit
+========================== */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(242, 210, 73);
+}
+
+.layout-navbar-footer {
+  background-color: rgb(230, 65, 157);
+}
+
+.layout-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  padding: 20px;
+}
+
+/* ==========================
+   Navbar-tyylit
+========================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #0070f3;
+  padding: 10px;
+}
+
+.logo-text {
+  margin-left: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0070f3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #0070f3;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff4500;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.navbar .nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .nav-link:hover {
+  color: #ff4500;
+}
+
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.desktop-only {
+  display: block;
+}

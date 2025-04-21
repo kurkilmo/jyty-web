@@ -41,37 +41,21 @@ const articles = [
 export default function Vappu() {
   return (
     <Layout>
-      <div style={containerStyle}>
-        <h1 style={{ textAlign: "center", fontSize: "5em" }}>Jyty Vapu_leho</h1>
+      <div className="container">
+        <h1 className="vappu-title">Jyty Vapu_leho</h1>
         <div>
           {articles.map((article) => (
-            <div key={article.id} style={{ marginBottom: "40px", textAlign: "center" }}>
-              <h2 style={{ fontSize: "2.5em", marginBottom: "20px" }}>{article.title}</h2>
-              <figure style={{ margin: "0 auto" }}>
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  style={{
-                    width: "100%",
-                    maxWidth: "600px",
-                    height: "auto",
-                    display: "block",
-                    margin: "0 auto",
-                    border: "5px solid #00ff00",
-                    borderRadius: "10px",
-                  }}
-                />
-                <figcaption style={{ fontSize: "1.2em", color: "#555", marginTop: "8px" }}>
-                  {`Kuva: ${article.title}`}
-                </figcaption>
+            <div key={article.id} className="article-container">
+              <h2 className="article-title">{article.title}</h2>
+              <figure className="article-figure">
+                <img src={article.image} alt={article.title} className="article-image" />
+                <figcaption className="article-caption">{`Kuva: ${article.title}`}</figcaption>
               </figure>
               <div
-                style={{ textAlign: "justify", fontSize: "1.5em", lineHeight: "1.8", marginTop: "20px" }}
+                className="article-content"
                 dangerouslySetInnerHTML={{ __html: article.content }}
               ></div>
-              <p style={{ fontSize: "1.2em", fontStyle: "italic", marginTop: "20px", color: "#555" }}>
-                {`Kirjoittanut: ${article.author}`}
-              </p>
+              <p className="article-author">{`Kirjoittanut: ${article.author}`}</p>
             </div>
           ))}
         </div>
@@ -79,9 +63,3 @@ export default function Vappu() {
     </Layout>
   );
 }
-
-const containerStyle = {
-  maxWidth: "800px",
-  margin: "0 auto",
-  padding: "20px",
-};
