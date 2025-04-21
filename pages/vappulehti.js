@@ -36,12 +36,6 @@ const articles = [
   },
   {
     id: 4,
-    type: "quote",
-    content: "“Teekkarit eivät vain juhli, he myös luovat historiaa.”",
-    author: "Joku viisas",
-  },
-  {
-    id: 5,
     type: "article",
     title: "Kansainvälisen Teekkarin Sanat",
     content: `
@@ -56,6 +50,19 @@ const articles = [
     `,
     image: "https://placehold.co/600x400",
     author: "Moguli",
+  },
+  {
+    id: 5,
+    type: "article",
+    title: "JYTYn vappu ilman tiliä",
+    content: `
+      <p>Kuvitelkaa JYTYn vappuvisio koossa. Fyysinen lehti, räväkät jutut ja myyntipiste kompassilla opiskelijajoukko kerääntyy ihastelemaan! Sitten kuuluu piip piip piip: pankki ei hyväksy pöytäkirjojamme. Lähetimme ne korjattuina, uudesta kokouksesta pöytäkirjoina, mutta mikään lähetys ei herättänyt pankin kiinnostusta. Tili on edelleen mysteeri, ja vappulehti odottaa painokuntoa tai siis ei odota, vaan on karannut verkkoon.</p>
+      <p>Syntyi byrokratian kevätkaruselli. Pöytäkirjat kasaantuivat pankin inboksiin, ja JYTYn suuret vappu unelmat kutistuivat kokoon kuin fuksilakki kevätauringossa. “Painetaan lehdet, myydään haalarimerkkejä!”, mutta ensin piti ratkaista tiliasia. Pankilta tuli vain samaa vastausta ja lehden kansi jäi haamulehdelle ikuisesti odottamaan.</p>
+      <p>Lopulta luovutimme fyysisen lehden kanssa ja hyppäsimme digitaaliseen vaappulehteen. Tervetuloa tähän digitaaliseen vapu_Lehoon, jossa lehden sivut skrollautuvat ja jutut latautuvat sekunneissa.</p>
+      <p>Kevään opetus? Jos haaveilet vappulehden myyntipöydästä, varmista ensin pankkitili – tai suosi suoraan virtuaaliversiota.</p>
+    `,
+    image: "tili.png",
+    author: "Juho Järvi"
   },
 ];
 
