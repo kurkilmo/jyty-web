@@ -1,7 +1,8 @@
 /* ==========================
-   Yleiset mobiilityylit
+   Mobiilityylit (max-width: 768px)
 ========================== */
 @media (max-width: 768px) {
+  /* Yleiset mobiilityylit */
   h1 {
     font-size: 3em;
   }
@@ -24,12 +25,8 @@
   .desktop-only {
     display: none;
   }
-}
 
-/* ==========================
-   Hallitus-sivun mobiilityylit
-========================== */
-@media (max-width: 768px) {
+  /* Hallitus-sivun mobiilityylit */
   .hallitus-container {
     gap: 15px;
   }
@@ -38,32 +35,37 @@
     width: 100%;
     max-width: 300px;
   }
-}
 
-/* ==========================
-   Vappulehti-sivun mobiilityylit
-========================== */
-@media (max-width: 768px) {
-  .vappu-title,
-  .article-title {
-    font-size: 3em;
+  /* Mobiililaitteiden luettavuuden parannukset */
+  body {
+    font-size: 1em;
+    line-height: 1.8;
+    padding: 0;
+    margin: 0;
   }
 
-  .article-image {
-    max-width: 100%;
-  }
-
-  .article-content {
-    font-size: 1.2em;
+  .article-content,
+  .home-paragraph,
+  .home-list {
+    font-size: 1em;
     line-height: 1.6;
-    text-align: center;
+    padding: 0 15px;
+    text-align: justify;
   }
-}
 
-/* ==========================
-   Etusivun mobiilityylit
-========================== */
-@media (max-width: 768px) {
+  .article-title,
+  .home-title {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  .article-container,
+  .home-container {
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  /* Etusivun mobiilityylit */
   .home-container {
     margin: 0 auto;
     padding: 15px;
@@ -79,12 +81,8 @@
     font-size: 1.2em;
     line-height: 1.6;
   }
-}
 
-/* ==========================
-   Navbar-mobiilityylit
-========================== */
-@media (max-width: 768px) {
+  /* Navbar-mobiilityylit */
   header.navbar {
     display: flex;
     flex-direction: column;
