@@ -1,6 +1,14 @@
 import Layout from "../components/Layout";
 
+const events = [
+  { id: 1, date: new Date("2025-04-29T17:00:00"), title: "Jytyn Vapu Ivetys" },
+];
+
 export default function Home() {
+  const now = new Date();
+
+  const upcomingEvents = events.filter(event => event.date > now);
+
   return (
     <Layout>
       <div className="home-container">
@@ -15,7 +23,20 @@ export default function Home() {
         </p>
         <h2 className="home-subtitle">Tulevat tapahtumat</h2>
         <ul className="home-list">
-          <li>29.4 klo 17:00-20:00 - Jytyn Vapu Ivetys</li>
+          {upcomingEvents.length > 0 ? (
+            upcomingEvents.map(event => (
+              <li key={event.id}>
+                {event.date.toLocaleDateString("fi-FI")} klo{" "}
+                {event.date.toLocaleTimeString("fi-FI", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}{" "}
+                - {event.title}
+              </li>
+            ))
+          ) : (
+            <li>Ei tulevia tapahtumia.</li>
+          )}
         </ul>
       </div>
     </Layout>
