@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 const articles = [
   {
     id: 1,
+    type: "article",
     title: "Rento ruusu",
     content: `
       <p>Kaikki alkoi rennosta Ruususta!</p>
@@ -16,6 +17,13 @@ const articles = [
   },
   {
     id: 2,
+    type: "quote",
+    content: "“Mikä vitun setämies kerho”",
+    author: "Tuntematon",
+  },
+  {
+    id: 3,
+    type: "article",
     title: "Perustamiskokous",
     content: `
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat consectetur mi non pulvinar. Cras elementum arcu a erat dictum elementum at sit amet dui. Nam quis molestie elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam nec justo id mi tristique euismod. Donec ac viverra lectus, eget faucibus lorem. Donec gravida ornare ligula, a eleifend purus. Aliquam sed cursus tortor, sed facilisis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
@@ -26,7 +34,14 @@ const articles = [
     author: "En muista joku",
   },
   {
-    id: 3,
+    id: 4,
+    type: "quote",
+    content: "“Teekkarit eivät vain juhli, he myös luovat historiaa.”",
+    author: "Joku viisas",
+  },
+  {
+    id: 5,
+    type: "article",
     title: "joo joku artikkeli",
     content: `
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat consectetur mi non pulvinar. Cras elementum arcu a erat dictum elementum at sit amet dui. Nam quis molestie elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam nec justo id mi tristique euismod. Donec ac viverra lectus, eget faucibus lorem. Donec gravida ornare ligula, a eleifend purus. Aliquam sed cursus tortor, sed facilisis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
@@ -44,20 +59,27 @@ export default function Vappu() {
       <div className="container">
         <h1 className="vappu-title">Jyty Vapu_leho</h1>
         <div>
-          {articles.map((article) => (
-            <div key={article.id} className="article-container">
-              <h2 className="article-title">{article.title}</h2>
-              <figure className="article-figure">
-                <img src={article.image} alt={article.title} className="article-image" />
-                <figcaption className="article-caption">{`Kuva: ${article.title}`}</figcaption>
-              </figure>
-              <div
-                className="article-content"
-                dangerouslySetInnerHTML={{ __html: article.content }}
-              ></div>
-              <p className="article-author">{`Kirjoittanut: ${article.author}`}</p>
-            </div>
-          ))}
+          {articles.map((item) =>
+            item.type === "article" ? (
+              <div key={item.id} className="article-container">
+                <h2 className="article-title">{item.title}</h2>
+                <figure className="article-figure">
+                  <img src={item.image} alt={item.title} className="article-image" />
+                  <figcaption className="article-caption">{`Kuva: ${item.title}`}</figcaption>
+                </figure>
+                <div
+                  className="article-content"
+                  dangerouslySetInnerHTML={{ __html: item.content }}
+                ></div>
+                <p className="article-author">{`Kirjoittanut: ${item.author}`}</p>
+              </div>
+            ) : (
+              <blockquote key={item.id} className="quote-container">
+                <p className="quote-content">{item.content}</p>
+                <footer className="quote-author">{`- ${item.author}`}</footer>
+              </blockquote>
+            )
+          )}
         </div>
       </div>
     </Layout>

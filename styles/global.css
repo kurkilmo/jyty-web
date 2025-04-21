@@ -104,6 +104,24 @@ body {
   color: #555;
 }
 
+.quote-container {
+  margin: 3rem 0;
+  font-style: italic;
+  padding: 0 120px;
+}
+
+.quote-content {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.quote-author {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: rgb(242, 210, 73);
+}
+
 /* ==========================
    Etusivun tyylit
 ========================== */
