@@ -3,9 +3,11 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [hoveredLink, setHoveredLink] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false); // Tila valikon avaamiselle
 
   const handleMouseEnter = (link) => setHoveredLink(link);
   const handleMouseLeave = () => setHoveredLink(null);
+  const toggleMenu = () => setMenuOpen(!menuOpen); // Valikon avaaminen/sulkeminen
 
   return (
     <header>
@@ -18,8 +20,15 @@ export default function Navbar() {
         <Link href="/" className="logo-text desktop-only">
           Jyväskylän Teekkariyhdistys
         </Link>
+        <button
+          className="menu-toggle mobile-only"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
       </div>
-      <nav>
+      <nav className={`nav ${menuOpen ? "open" : ""}`}>
         <ul className="nav-list">
           <li className="nav-item">
             <Link
@@ -45,6 +54,19 @@ export default function Navbar() {
               }}
             >
               Hallitus
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link
+              href="/saannot"
+              className="nav-link"
+              onMouseEnter={() => handleMouseEnter("saannot")}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                color: hoveredLink === "saannot" ? "#ff4500" : undefined,
+              }}
+            >
+              Säännöt
             </Link>
           </li>
         </ul>

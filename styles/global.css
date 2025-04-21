@@ -1,5 +1,5 @@
 /* ==========================
-   Yleiset tyylit
+   Fontit ja perusasetukset
 ========================== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=VT323&display=swap');
 
@@ -10,9 +10,33 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(230, 65, 157);
+  background-color: #f9f9f9;
   font-family: 'VT323', monospace;
   font-size: 1rem;
+  line-height: 1.8;
+  color: #222;
+}
+
+/* ==========================
+   Yleiset tyylit
+========================== */
+h1 {
+  font-size: 3em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(0, 102, 204);
+}
+
+.logo-text:hover {
+  color: rgb(51, 153, 255);
 }
 
 /* ==========================
@@ -62,131 +86,76 @@ body {
 .vappu-title {
   text-align: center;
   font-size: 3em;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .article-container {
-  margin-bottom: 40px;
-  text-align: center;
+  margin-bottom: 40px; /* Jo olemassa oleva marginaali */
+  text-align: left;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: rgb(0, 102, 204);
+}
+
+.article-container + .article-container {
+  margin-top: 20px;
 }
 
 .article-title {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #444;
 }
 
 .article-figure {
-  margin: 0 auto;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .article-image {
-  width: 100%;
-  max-width: 600px;
+  max-width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto;
-  border: 5px solid #00ff00;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .article-caption {
-  font-size: 1.2em;
-  color: #555;
-  margin-top: 8px;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
 }
 
 .article-content {
-  text-align: justify;
-  font-size: 1.2em;
-  line-height: 1.8;
-  margin-top: 20px;
-  padding: 0 120px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #222;
 }
 
 .article-author {
-  font-size: 1.2em;
   font-style: italic;
-  margin-top: 20px;
-  color: #555;
+  font-size: 1em;
+  margin-top: 15px;
+  color: #444;
 }
 
 .quote-container {
-  margin: 3rem 0;
-  font-style: italic;
-  padding: 0 120px;
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 4px solid #ffcc00;
+  background-color: #fffbe6;
 }
 
 .quote-content {
-  margin: 0;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-style: italic;
+  color: #222;
 }
 
 .quote-author {
   text-align: right;
-  font-size: 0.9rem;
+  font-size: 1em;
   color: #555;
-  background-color: rgb(242, 210, 73);
-}
-
-/* ==========================
-   Etusivun tyylit
-========================== */
-.home-container {
-  max-width: 600px;
-  margin: 0 auto 0 50px;
-  padding: 20px;
-}
-
-.home-title {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.home-highlight {
-  font-size: 1.2em;
-  font-style: italic;
-  color: #ff0000;
-  margin-bottom: 20px;
-}
-
-.home-paragraph {
-  font-size: 1.5em;
-  line-height: 1.8;
-}
-
-.home-subtitle {
-  font-size: 2em;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-.home-list {
-  font-size: 1.5em;
-  line-height: 1.8;
-  list-style-type: circle;
-  padding-left: 20px;
-}
-
-/* ==========================
-   Footer-tyylit
-========================== */
-footer {
-  padding: 20px;
-  text-align: center;
-  height: 60px;
-  flex-shrink: 0;
-  background-color: rgb(230, 65, 157);
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
 }
 
 /* ==========================
@@ -212,7 +181,7 @@ footer {
 }
 
 /* ==========================
-   Navbar-tyylit
+   Navbar-tyylit (Desktop oletuksena)
 ========================== */
 header {
   display: flex;
@@ -221,11 +190,14 @@ header {
   padding: 10px 20px;
   height: 60px;
   flex-shrink: 0;
+  position: relative;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .logo {
@@ -238,96 +210,294 @@ header {
   height: 70px;
   cursor: pointer;
   border-radius: 50%;
-  padding: 10px;
-}
-
-.logo-text {
-  margin-left: 10px;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #0070f3;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-}
-
-.nav-item {
-  margin-left: 20px;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #0070f3;
-  font-size: 1.2em;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #ff4500;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
-}
-
-.navbar .nav-link {
-  text-decoration: none;
-  color: white;
-}
-
-.navbar .nav-link:hover {
-  color: #ff4500;
-}
-
-header.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 50px;
 }
 
 .nav {
-  display: flex;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background: #fffbe6;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
 }
 
-.nav-list {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-}
-
-.logo-text {
-  font-size: 1.2rem;
+.nav-link {
+  color: rgb(0, 102, 204);
+  font-size: 1.2em;
   font-weight: bold;
+}
+
+.nav-link:hover {
+  color: rgb(51, 153, 255);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-only {
+  display: none;
 }
 
 .desktop-only {
   display: block;
+}
+
+/* ==========================
+   Mobiilityylit (max-width: 768px)
+========================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  .layout-main {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  footer {
+    padding: 15px;
+    height: auto;
+  }
+
+  .footer-content,
+  .social-links {
+    gap: 10px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .hallitus-container {
+    gap: 15px;
+  }
+
+  .hallitus-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  body {
+    font-size: 1em;
+    line-height: 1.8;
+    padding: 0;
+    margin: 0;
+  }
+
+  .article-content,
+  .home-paragraph,
+  .home-list {
+    font-size: 1em;
+    line-height: 1.6;
+    padding: 0 15px;
+    text-align: justify;
+  }
+
+  .article-title,
+  .home-title {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  .article-container,
+  .home-container {
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .home-container {
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  .home-title {
+    font-size: 2.5em;
+  }
+
+  .home-paragraph,
+  .home-list,
+  .home-subtitle {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo img {
+    height: 70px;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background: #fffbe6;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}
+
+.home-container {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 800px; /* Halutessasi voit rajoittaa leveyttä */
+  padding: 20px;
+}
+
+/* Desktop-tyylit */
+@media (min-width: 769px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 60px;
+    position: relative;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    position: static;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: rgb(0, 102, 204);
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .nav-link:hover {
+    color: rgb(51, 153, 255);
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* ==========================
+   Rules-sivun tyylit
+========================== */
+.rules {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rules h1.title {
+  font-size: 2.5em;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.rules h2 {
+  font-size: 1.8em;
+  color: #444;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.rules p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.rules ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.rules ul li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
 }
